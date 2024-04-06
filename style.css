@@ -1,0 +1,532 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Div Da Intro*/
+
+#Video{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+}
+
+#Video button{
+    background-color: #00000000;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#Video button h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16vw;
+    color: white;
+}
+
+#Video button:hover{
+    cursor: pointer;
+}
+
+#Video audio{
+    display: none;
+    width: 0%;
+    height: 0%;
+}
+
+#Video-Starter{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Parte Principal */
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://t3.ftcdn.net/jpg/05/31/73/54/360_F_531735463_DM0jlqNNJy5JTEcsrbioBUSWbVnrVbXP.jpg);
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+}
+
+
+/* Header */
+
+header{
+    width: 100%;
+    height: 8%;  
+    display: flex;  
+}
+
+header #Refresh{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #Refresh button{
+    background-color: #00000000;
+    border: 0px;
+    width: 60%;
+}
+
+header #Refresh button:hover{
+    cursor: pointer;
+}
+
+header #Refresh button h1{
+    color: #00000000;
+    -webkit-text-stroke: 1px white;
+    font-size: 4vw;
+    font-family:'Courier New', Courier, monospace
+}
+
+header #Refresh button h1:hover{
+    color: crimson;
+    -webkit-text-stroke: 0px;
+}
+
+header #divisor{
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#numeros{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    padding: 0%;
+    flex-direction: column;
+    background-color: aliceblue;
+    border-radius: 0px 0px 20px 20px;
+    margin-left: 10%;
+}
+
+#os_numeros{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-Y: scroll;
+}
+#os_numeros::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+#os_numeros::-webkit-scrollbar-thumb {
+    background-color: crimson;
+    border-radius: 4px;
+  }
+  
+#os_numeros::-webkit-scrollbar-thumb:hover {
+    background-color:  black;
+  }  
+
+
+#tituo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#numeros-sorteados{
+    width: 1%;
+    height: 1%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+#divisor #place{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+header #play{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+header #play button{
+    background-color: #00000000;
+    border: 0px;
+    width: 60%;
+    height: 60%;
+}
+
+header #play button:hover{
+    cursor: pointer;
+}
+
+#PlayPause{
+    width:  4vw;
+    height: 3vw;
+}
+
+#PlayPause:hover{
+    border-radius: 120px;
+    box-shadow: 0px 0px 10px crimson;
+}
+
+/* Main */
+
+main{
+    width: 100%;
+    height: 92%;
+    display: flex
+}
+
+/* Parte Esquerda da Main */
+
+#Esquerda{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#painel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    border-radius: 2vw;
+    background-image: url(https://i.postimg.cc/J7xKSqSr/RPG-quest-fw.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+#caixa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+
+#caixa::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  #caixa::-webkit-scrollbar-thumb {
+    background-color: crimson;
+    border-radius: 4px;
+  }
+  
+  #caixa::-webkit-scrollbar-thumb:hover {
+    background-color:  black;
+  }  
+
+/* Mudando A table */
+
+#caixa table {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 40%;
+}
+
+#caixa table thead {
+    width: 100%;
+    height: 20%;
+}
+
+#caixa table thead tr {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    position: sticky; 
+    top: 0; 
+}
+
+#caixa table thead #icone {
+    border-radius: 20px 20px 20px 20px;
+    width: 30%;
+    display: flex;
+    border: solid 1px;
+    padding: none;
+    background-image: url();
+}
+
+#caixa table thead #icone img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#caixa table thead #Nickname {
+    border-radius: 10px 10px 0px 0px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: solid 1px;
+    padding: 10px;
+    background-color: peru;
+}
+
+#caixa table tbody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+}
+
+
+#caixa table tbody tr{
+    display: flex;
+    width: 100%;
+    height: 20%;
+}
+
+
+#caixa table tbody tr td{
+    border: 1px solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    background-color: peru;
+}
+
+
+/* Parte Direita da Main */
+
+#Direita{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 100%;
+}
+
+#Direita #Barmem{
+    background-color: #00000000;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Direita #Barmem:hover{
+    cursor: pointer;
+}
+
+/* Dialogo Do Barmem */
+
+#Perguntas{
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 100%;
+    height: 30%;
+    border-radius: 100px;
+    background-color: white;
+}
+
+#Perguntas h4{
+    display: inline-flex;
+    align-items: center;
+    font-size: 1vw;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 10%;
+}
+
+#falas{
+    padding: 2%;
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    height: 30%;
+}
+
+#Perguntas #butoes{
+    padding: 2%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+#Perguntas #butoes button{
+    background-color: #00000000;
+    border-radius: 1vw;
+    border: none;
+    font-size: 2vw;
+    color: crimson;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    width: 80%;
+    height: 80%;
+}
+
+#Perguntas #butoes button:hover{
+    cursor: pointer;
+    color: peru;
+}
+/* Pop uP */
+
+#Adicinar{
+    z-index: 2;
+    position: absolute;
+    height: 60%;
+    display: flex;
+    border-radius: 70px;
+    background-color: peru;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#Escolha{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#Escolha h5{
+    font-size: 1VW;
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+#Escolha button{
+    background-color: #00000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+#Escolha button:hover{
+    cursor: pointer;
+    border-radius: 100px;
+    box-shadow: 0px 0px 20px 6px crimson;
+}
+
+#Escolha button img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+#preinput #X{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 15%;
+    height: 15%;
+    border-radius: 1000px;
+    background-color: #00000000;
+    border: NONE;
+}
+
+#preinput #X img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#preinput #X:hover{
+    cursor: pointer;
+    border-radius: 200px;
+    box-shadow: 0px 0px 30px 4px black;
+}
+
+#preinput {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+#preinput input {
+    width: 70%;
+    padding: 1%;
+    margin: 3%;
+    background-color: #00000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+}
+  
+#preinput #criar{
+    background-color: white;
+    border-radius: 100px;
+    border: none;
+    padding: 3%;
+}
+
+#preinput #criar:hover{
+    box-shadow: 0px 0px 10px 4px crimson;
+    cursor: pointer;
+}
+
+#nome::placeholder {
+    color: black;
+  }
+  
+  #preinput::placeholder {
+    color: black;
+  }
+  

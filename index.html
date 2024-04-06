@@ -1,17 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br ">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bingo</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/png-transparent-darkest-dungeon-tavern-wikia-dungeon-crawl-game-others-miscellaneous-dark-cartoon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--criar uma cartela de bingo com botão pra gerar numeos e botão pra enviar os numeros para o whatsapp 5563992381687-->
+
+    <div id="Video">
+        <button onclick="Start()" type="button"><h1 id="tela_inicial">BINGO</h1></button>
+        <audio id="music" src="musics/SaveTube.io - RPG Playlist - Tavern_Inn Music (128 kbps).mp3"></audio>
+        <video src="videos/SaveTube.io-Door opening animation with sound (From Resident Evil) _ Animazione apertura porta-(480p).mp4" type="video/mp4" id="Video-Starter">
+        </video>
+    </div>
+
+    <header>
+        <div id="Refresh">
+            <button onclick="Refresh()" type="button">
+                <h1>Bingo</h1>
+            </button>
+        </div>
+
+        <div id="divisor" style="display: none;">
+            <div id="place">
+                <div id="numeros">
+                    <p id="tituo">Numeros Sortiados</p>
+                    <div id="os_numeros"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="play">
+            <button onclick="PauseMusic()"> 
+                <img id="PlayPause" src="https://img.uxwing.com/wp-content/themes/uxwing/download/video-photography-multimedia/pause-button-red-icon.png">
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div id="Esquerda">
+            <div id="painel">
+                <div id="caixa"></div>
+            </div>
+        </div>
+        
+        <div id="Direita">
+            <button id="Barmem" ondblclick="Dialogo()" onclick="Dialogo()">
+                <img src="Imagens/png-transparent-darkest-dungeon-tavern-wikia-dungeon-crawl-game-others-miscellaneous-dark-cartoon.png" alt="Barmem">
+            </button>
+
+            <div id="Perguntas" style="display: none;">
+                <h4>Jack "Marés Profundas" McGregor</h4>
+                <p id="falas"></p>
+                
+                <div id="butoes">
+                    <button onclick="Adicinar()">Adicionar</button>
+                    <button onclick="reiniciarJogo()">Resetar</button>
+                    <button onclick="iniciarSorteio()">Começar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="Adicinar" style="display: none;">
+        <div id="Escolha">
+            <h5>Escolha seu personagem!!!</h5>
+            <button class="imagens">
+                <img id="Nami" onclick="getCharacterImage('nami')" src="Imagens/Personagens/Screenshot_1.png" alt="Nami">
+            </button>
+            <button class="imagens">
+                <img id="Lufi" onclick="getCharacterImage('lufi')" src="Imagens/Personagens/Screenshot_2.png" alt="Lufi">
+            </button>
+            <button class="imagens">
+                <img id="Sanji" onclick="getCharacterImage('sanji')" src="Imagens/Personagens/Screenshot_3.png" alt="Sanji">
+            </button>
+            <button class="imagens">
+                <img id="Zoro" onclick="getCharacterImage('zoro')" src="Imagens/Personagens/Screenshot_4.png" alt="Zoro">
+            </button>
+            <button class="imagens">
+                <img id="Robin" onclick="getCharacterImage('robin')" src="Imagens/Personagens/Screenshot_5.png" alt="Robin">
+            </button>
+        </div>
+
+        <div id="preinput">
+            <button id="X" onclick="Adicinar()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/White_X_in_red_background.svg/2048px-White_X_in_red_background.svg.png" alt="retorn">
+            </button>
+            <input type="text" placeholder="Nome Do personagem" id="nome">
+            <button id="criar" onclick="gerarCartela()">Criar personagem!!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<div style="background-color: azure; margin: 30px;">
-
-</div>
-
 </html>
